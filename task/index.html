@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Git Statics</title>
+
+    <!-- CSS links -->
+
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+  </head>
+
+  <body ng-app="myApp" >
+
+  <!-- *************Header starts here****************-->
+  	<head>
+  		<div class="main-menu">
+  			<nav class="nav navbar navbar-default navbar-fixed-top" id="bar">
+  				<div class="container nav-container">
+  					<div class="navbar-header">
+    						<!-- <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  	                <span class="sr-only">Toggle navigation</span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	            </button>
+
+    						<div class="navbar-brand">
+    							XYZ
+    						</div> -->
+
+  					</div>
+  				</div>
+  			</nav>
+  		</div>
+  	</head>
+  	<!-- *************Header ends here****************-->
+
+  	<!-- *********ui view starts here ********-->
+
+  	<!-- <div class="wrapper" style="margin-top: 100px;">
+  		<ui-view> Loading..</ui-view>
+  	</div> -->
+
+    <div class="container" style="margin-top: 100px;" ng-controller='UserController as user'>
+       <h2>{{user.name}}</h2>
+        <form class="form form-group">
+              <div class="form-group">
+                <label>Enter the user name of Git user: </label>
+                <input class="form-control" type="text" name="name" ng-model="user.userName" placeholder="id">
+              </div>
+              <div class="form-group">
+               <button class="btn btn-info" ng-click="user.getUser()">Submit</button>
+               </div>
+            </form>
+
+
+      <div class="container">
+        <h2>Repositories Owned:</h2>
+      </div>
+
+      <div class="container">
+        <div class="repo-box" ng-repeat="repo in user.categories">
+          <a ui-sref="user">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+            <h4>{{repo.name}}</h4>
+          </div>
+        </div>
+          </a>
+
+          <ui-view></ui-view>
+
+      </div>
+   </div>  
+  		<!-- *********ui view ends here **********-->
+
+  		<!-- Libs -->
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <!-- <script src="src/script.js"></script> -->
+
+    <!--Main module  -->
+    <script src="src/main.app.js"></script>
+
+
+    <!-- Public Module -->
+   
+
+  
+
+
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #e1e4e8;
+}
+
+.box{
+	border: 1px solid #ddd;
+	background-color: #fff;
+	padding: 20px;
+	display: inline-block;
+}
+
+.box:hover{
+	background-color: #4e0a0a;
+	color: #fff;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}

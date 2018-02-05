@@ -28,6 +28,7 @@ function UserController(UserService) {
   var user = this;
 
    user.userName = "";
+   user.message = "Repositories Owened:";
 
    user.getUser = function () {
      console.log(UserService.repo(user.userName));
